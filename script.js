@@ -3,16 +3,13 @@ var cityName;
 console.log(cityName);
 
 var queryURL =
-  "https://api.openweathermap.org/data/2.5/weather?q=" +
-  cityName +
-  "&appid=" +
-  apikey;
+  "https://api.openweathermap.org/data/2.5/weather?q=London&appid=" + apikey;
 
 console.log(queryURL);
 
 $("#saveCity").click(function () {
-  cityName = $("#cityName").val();
-  console.log(cityName);
+  var cityName = $("#cityName").val();
+  console.log("extracting the input value from: ", $("#cityName"));
 });
 $.ajax({
   url: queryURL,
