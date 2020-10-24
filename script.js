@@ -1,5 +1,5 @@
 var apikey = "5a9330ff39aa4d71dda59e8146ab11fd";
-
+var cityName;
 console.log(cityName);
 
 var queryURL =
@@ -11,7 +11,7 @@ var queryURL =
 console.log(queryURL);
 
 $("#saveCity").click(function () {
-  cityName = $("cityName").val();
+  cityName = $("#cityName").val();
   console.log(cityName);
 });
 $.ajax({
