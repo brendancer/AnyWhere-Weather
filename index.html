@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather Dashboard</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+    <header class="container-fluid">
+      <h1 class="bg-secondary text-white text-center">Weather Dashboard</h1>
+    </header>
+
+    <!--city search and local storage-->
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <form>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id = "cityName" placeholder="Any City" />
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="saveCity">
+                  Search
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <h4>Search History</h4>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+        </div>
+
+        <!--city data-->
+
+        <div class="col-md-9 border">
+          <span class="border"></span>
+          <h2 id="cityName">City Name</h2>
+
+          <p id="temp">Temperature</p>
+
+          <p id="humidity">Humidity</p>
+
+          <p id="wind-speed">Wind Speed</p>
+
+          <p id="UV">UV Index</p>
+        </div>
+
+        <!--5 day forcast-->
+        <div class ="container-fluid">
+
+      <div class="d-flex p-5 bg-primary text-white justify-content-end">
+        <div class = "col-2 bg-primary">Day 1</div>
+        <div class = "col-2 bg-primary">Day 1</div>
+        <div class = "col-2 bg-primary">Day 1</div>
+        <div class = "col-2 bg-primary">Day 1</div>
+        <div class = "col-2 bg-primary">Day 1</div>
+      </div>
+    </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+    <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
