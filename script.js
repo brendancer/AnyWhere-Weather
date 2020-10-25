@@ -25,9 +25,10 @@ $("#saveCity").click(function () {
     //add city name to city data box
     var nameCity = response.name;
     $("#nameCity").html(nameCity);
-    var date = moment().format("LLLL");
-    console.log(Date);
-    $("<h3>").append(date);
+
+    //add date
+    var date = moment().format("LL");
+    $("#currentDay").html(date);
 
     //Switch to one call to obtain results including uv index and forcast
     var query1URL =
@@ -43,7 +44,7 @@ $("#saveCity").click(function () {
       url: query1URL,
       method: "GET",
     }).then(function (response) {
-      //display city dat
+      //display city data
       console.log(response);
 
       var temp = response.current.temp;
@@ -63,5 +64,18 @@ $("#saveCity").click(function () {
     //<i id ="icon">icon</i> <br>
     // <p id ="forcastTemp">temp</p>
     //<p id ="forcastHumid">humidity</p>
+    var forcast_1 = moment().add(1, "days").format("L");
+    var forcast_2 = moment().add(2, "days").format("L");
+    var forcast_3 = moment().add(3, "days").format("L");
+    var forcast_4 = moment().add(4, "days").format("L");
+    var forcast_5 = moment().add(5, "days").format("L");
+
+    $("#forcast-1").html(forcast_1);
+    $("#forcast-2").html(forcast_2);
+    $("#forcast-3").html(forcast_3);
+    $("#forcast-4").html(forcast_4);
+    $("#forcast-5").html(forcast_5);
+
+   
   });
 });
