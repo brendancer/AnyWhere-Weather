@@ -73,10 +73,12 @@
         </div>
 
         <!--city data-->
-
-        <div class="col-md-9 border">
-          <span class="border"></span>
+        <div class ="container-fluid">
+        <div class="row">
+          <div class="col-md-9 border">
+            <span class="border"></span>
           <h2 id="nameCity">City Name</h2>
+          <h4 id="currentDay">date</h4>
 
           <p id="temp">Temperature</p>
 
@@ -86,21 +88,57 @@
 
           <p id="UV">UV Index</p>
         </div>
-
+      </div>
+    </div>
         <!--5 day forcast-->
         <div class ="container-fluid">
 
-      <div class="d-flex p-5 bg-primary text-white justify-content-">
-        <div class = "col-2 bg-primary">Day 1</div>
-        <div class = "col-2 bg-primary">Day 2</div>
-        <div class = "col-2 bg-primary">Day 3</div>
-        <div class = "col-2 bg-primary">Day 1</div>
-        <div class = "col-2 bg-primary">Day 1</div>
+      <div class = "card-deck">
+        <div class= "card bg-primary">
+          <div class = "card-body">
+            <h4 id = "forcast-1">day 1</h4>
+            <i id ="icon">icon</i> <br>
+            <p id ="forcastTemp">temp</p> 
+            <p id ="forcastHumid">humidity</p>
+          </div>
+        </div>
+        <div class= "card bg-primary">
+          <div class = "card-body">
+            <h4 id = "forcast-2">day 1</h4>
+            <i id ="icon">icon</i> <br>
+            <p id ="forcastTemp">temp</p> 
+            <p id ="forcastHumid">humidity</p>
+          </div>
+        </div>
+        <div class= "card bg-primary">
+          <div class = "card-body">
+            <h4 id = "forcast-3">day 1</h4>
+            <i id ="icon">icon</i> <br>
+            <p id ="forcastTemp">temp</p> 
+            <p id ="forcastHumid">humidity</p>
+          </div>
+        </div>
+        <div class= "card bg-primary">
+          <div class = "card-body">
+            <h4 id = "forcast-4">day 1</h4>
+            <i id ="icon">icon</i> <br>
+            <p id ="forcastTemp">temp</p> 
+            <p id ="forcastHumid">humidity</p>
+          </div>
+        </div>
+        <div class= "card bg-primary">
+          <div class = "card-body">
+            <h4 id = "forcast-5">day 1</h4>
+            <i id ="icon">icon</i> <br>
+            <p id ="forcastTemp">temp</p> 
+            <p id ="forcastHumid">humidity</p>
+          </div>
+        </div>
       </div>
     </main>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  
+    <!--Moment, then my file, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

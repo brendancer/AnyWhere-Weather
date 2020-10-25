@@ -22,6 +22,14 @@ $("#saveCity").click(function () {
     var lat = response.coord.lat;
     console.log(long);
 
+    //add city name to city data box
+    var nameCity = response.name;
+    $("#nameCity").html(nameCity);
+    var date = moment().format("LLLL");
+    console.log(Date);
+    $("<h3>").append(date);
+
+    //Switch to one call to obtain results including uv index and forcast
     var query1URL =
       "https://api.openweathermap.org/data/2.5/onecall?lat=" +
       lat +
@@ -50,5 +58,10 @@ $("#saveCity").click(function () {
       var uvi = response.current.uvi;
       $("#UV").html("UV index: : " + uvi);
     });
+    //5 day forcast
+    //<h4 id = "forcast-1">day 1</h4>
+    //<i id ="icon">icon</i> <br>
+    // <p id ="forcastTemp">temp</p>
+    //<p id ="forcastHumid">humidity</p>
   });
 });
