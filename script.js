@@ -3,7 +3,7 @@ var lon;
 var lat;
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
-  console.log(cityName);
+
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
@@ -48,13 +48,13 @@ $("#saveCity").click(function () {
       console.log(response);
 
       var temp = response.current.temp;
-      $("#temp").html("Temperature: " + temp);
+      $("#temp").html("Temperature: " + temp + "°F");
 
       var humid = response.current.humidity;
-      $("#humidity").html("Humidity: " + humid);
+      $("#humidity").html("Humidity: " + humid + "%");
 
       var wind = response.current.wind_speed;
-      $("#wind-speed").html("Wind Speed: " + wind);
+      $("#wind-speed").html("Wind Speed: " + wind + "mph");
 
       var uvi = response.current.uvi;
       $("#UV").html("UV index: : " + uvi);
@@ -64,6 +64,7 @@ $("#saveCity").click(function () {
     //<i id ="icon">icon</i> <br>
     // <p id ="forcastTemp">temp</p>
     //<p id ="forcastHumid">humidity</p>
+
     var forcast_1 = moment().add(1, "days").format("L");
     var forcast_2 = moment().add(2, "days").format("L");
     var forcast_3 = moment().add(3, "days").format("L");
@@ -76,6 +77,9 @@ $("#saveCity").click(function () {
     $("#forcast-4").html(forcast_4);
     $("#forcast-5").html(forcast_5);
 
-   
+    // for(i=0; i<5; i++){
+    //   var cardTemp = response.
+
+    // }
   });
 });
