@@ -7,6 +7,7 @@ $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
 
   //saving cityName to local storage
+  localStorage.setItem("city", JSON.stringify(cityName));
 
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
