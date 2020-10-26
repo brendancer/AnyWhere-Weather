@@ -25,17 +25,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   
-    <header class="container">
+    <header class="container-fluid">
       <h1 class="bg-secondary text-white text-center">Weather Dashboard</h1>
     </header>
 
     <!--city search and local storage-->
   <main class="container-fluid">
-    
-    <section class="row">
-      <section>
-      <div class="input-group col-xs-4">   
-          <input type="text"  class = "form-control" id = "cityName" placeholder="Any City" />
+    <div class="row">
+      <div class="col-sm text-center">
+      
+        <div class="input-group">   
+        <input type="text"  class = "form-control" id = "cityName" placeholder="Any City" />
           <div class ="input-group-append">
         <button class="btn btn-primary" type="button" id="saveCity">
                   Search
@@ -46,9 +46,9 @@
         <br>
       </div>
    
-       <!--Buttons showing previous city selections-->>
-      <div class="btn-group-vertical ">
-          <h4 style="text-align: center">Search History</h4>
+       <!--Buttons showing previous city selections-->
+      <div class="btn-group-vertical">
+          <h4 class="m-3">Search History</h4>
           <button type="button" class="btn btn-outline-secondary">
             Previous City
           </button>
@@ -65,13 +65,14 @@
             Previous City
           </button>
       </div>
+    </div>
     
-  </section>
     
     
         <!--city data-->
-  <section>
-      <div class="col-xs-8 border mt-3">
+      
+      <div class = "col-sm">
+      <div class="border border-primary mt-3 p-3">
           <h2 id="nameCity">City Name</h2>
           <h4 id="currentDay">date</h4>
 
@@ -84,10 +85,18 @@
           <p id="UV">UV Index</p>
       </div>
     </div>
-   </section>
+    <div class = "col-sm">
+      <img src= "assets/weather-vane-5240031_1920.jpg" style ="width: 75%" class="img-fluid mt-5 ml-5 rounded-circle" alt="Rooster Weather Vane">
+   </div>
+   
+  </div>
+  </div>
+
+  
 
 
-  </section>
+  </div>
+
 
   
     

@@ -1,9 +1,14 @@
 var apikey = "5a9330ff39aa4d71dda59e8146ab11fd";
 var long;
 var lat;
+
+//obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
 
+  //saving cityName to local storage
+
+  //calling "current weather data" api to get longitude and latitude
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
@@ -47,7 +52,7 @@ $("#saveCity").click(function () {
       //display city data
       console.log(response);
 
-      var temp = response.current.temp;
+      var temp = Math.round(response.current.temp);
       $("#temp").html("Temperature: " + temp + "°F");
 
       var humid = response.current.humidity;
@@ -60,10 +65,7 @@ $("#saveCity").click(function () {
       $("#UV").html("UV index: : " + uvi);
 
       //5 day forcast
-      //<h4 id = "forcast-1">day 1</h4>
-      //<i id ="icon">icon</i> <br>
-      // <p id ="forcastTemp">temp</p>
-      //<p id ="forcastHumid">humidity</p>
+
       //adding date to forcast cards
       var forcast_1 = moment().add(1, "days").format("L");
       var forcast_2 = moment().add(2, "days").format("L");
