@@ -18,65 +18,59 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
   </head>
   <body>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   
-    <header class="container-fluid">
+    <header class="container">
       <h1 class="bg-secondary text-white text-center">Weather Dashboard</h1>
     </header>
 
     <!--city search and local storage-->
-    <main class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-         
-              <input type="text"  id = "cityName" placeholder="Any City" />
-                <button class="btn btn-primary" type="button" id="saveCity">
+  <main class="container-fluid">
+    <section class="form-row">
+      <section>
+      <div class="input-group col-xs-4">   
+          <input type="text"  class = "form-control" id = "cityName" placeholder="Any City" />
+          <div class ="input-group-append">
+        <button class="btn btn-primary" type="button" id="saveCity">
                   Search
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
-         
-
-          <h4>Search History</h4>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
-          <button type="button" class="btn btn-outline-secondary">
-            Previous City
-          </button>
+        <i class="fa fa-search"></i>
+        </button>
         </div>
 
+        <br>
+      </div>
+   
+       <!--Buttons showing previous city selections-->>
+      <div class="btn-group-vertical ">
+          <h4 style="text-align: center">Search History</h4>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            Previous City
+          </button>
+      </div>
+    
+  </section>
+    
+    
         <!--city data-->
-        <div class ="container-fluid">
-        <div class="row">
-          <div class="col-md-9 border">
-            <span class="border"></span>
+  <section>
+      <div class="col-xs-8 border mt-3">
           <h2 id="nameCity">City Name</h2>
           <h4 id="currentDay">date</h4>
 
@@ -87,56 +81,75 @@
           <p id="wind-speed">Wind Speed</p>
 
           <p id="UV">UV Index</p>
-        </div>
       </div>
     </div>
-        <!--5 day forcast-->
-        <div class ="container-fluid">
+   </section>
 
-      <div class = "card-deck">
+
+  </section>
+
+  
+    
+        <!--5 day forcast-->
+    <section class ="container-fluid">
+      <h3 class = "mt-3">5 day forcast</h3>
+      <div class = "card-deck mt-3">
         <div class= "card bg-primary">
-          <div class = "card-body">
+          <div class = "card-body" style = "line-height: 5px">
             <h6 id = "forcast-1">day 1</h6>
-            <i id ="icon1">icon</i> <br>
-            <p id = "forcastcondition">condition</p>
-            <p id ="forcastTemp1">temp</p> 
+            <div id="icon1"><src="" alt="Weather icon"></div>
+            <p id = "forcastCondition1">condition</p>
+            <p id ="forcastHigh1" style = "line-height:0.5;">high
+            <p id ="forcastLow1">low</p>
             <p id ="forcastHumid1">humidity</p>
           </div>
         </div>
+    
         <div class= "card bg-primary">
-          <div class = "card-body">
-            <h6 id = "forcast-2">day 2</h6>
-            <i id ="icon2">icon</i> <br>
-            <p id ="forcastTemp2">temp</p> 
+          <div class = "card-body" style = "line-height: 5px">
+            <h6 id = "forcast-2">day 1</h6>
+            <div id="icon2"><src="" alt="Weather icon"></div>
+            <p id = "forcastCondition2">condition</p>
+            <p id ="forcastHigh2" style = "line-height:0.5;">high
+            <p id ="forcastLow2">low</p>
             <p id ="forcastHumid2">humidity</p>
           </div>
         </div>
+    
         <div class= "card bg-primary">
-          <div class = "card-body">
-            <h6 id = "forcast-3">day 3</h6>
-            <i id ="icon3">icon</i> <br>
-            <p id ="forcastTemp3">temp</p> 
+          <div class = "card-body" style = "line-height: 5px">
+            <h6 id = "forcast-3">day 2</h6>
+            <div id="icon3"><src="" alt="Weather icon"></div>
+            <p id = "forcastCondition3">condition</p>
+            <p id ="forcastHigh3" style = "line-height:0.5;">high
+            <p id ="forcastLow3">low</p>
             <p id ="forcastHumid3">humidity</p>
           </div>
         </div>
+     
         <div class= "card bg-primary">
-          <div class = "card-body">
-            <h6 id = "forcast-4">day 4</h6>
-            <i id ="icon4">icon</i> <br>
-            <p id ="forcastTemp4">temp</p> 
+          <div class = "card-body" style = "line-height: 5px">
+            <h6 id = "forcast-4">day 1</h6>
+            <div id="icon4"><src="" alt="Weather icon"></div>
+            <p id = "forcastCondition4">condition</p>
+            <p id ="forcastHigh4" style = "line-height:0.5;">high
+            <p id ="forcastLow4">low</p>
             <p id ="forcastHumid4">humidity</p>
           </div>
         </div>
+     
         <div class= "card bg-primary">
-          <div class = "card-body">
-            <h6 id = "forcast-5">day 5</h6>
-            <i id ="icon5">icon</i> <br>
-            <p id ="forcastTemp5">temp</p> 
+          <div class = "card-body" style = "line-height: 5px">
+            <h6 id = "forcast-5">day 1</h6>
+            <div id="icon5"><src="" alt="Weather icon"></div>
+            <p id = "forcastCondition5">condition</p>
+            <p id ="forcastHigh5" style = "line-height:0.5;">high
+            <p id ="forcastLow5">low</p>
             <p id ="forcastHumid5">humidity</p>
           </div>
         </div>
-      </div>
-    </main>
+      </section>
+ </main>
 
     <!--Moment, then my file, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
