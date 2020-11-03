@@ -7,7 +7,6 @@ console.log(searchHistory);
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
-  console.log(cityName);
 
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
@@ -93,15 +92,14 @@ $("#saveCity").click(function () {
         $("#forcastHigh" + [i]).html("High: " + cardHigh + "°F");
         $("#forcastLow" + [i]).html("Low: " + cardLow + "°F");
         $("#forcastHumid" + [i]).html("Humidity: " + cardHumid + "%");
-
-        //saving cityName to local storage
-        console.log(searchHistory);
-        console.log(cityName);
-
-        searchHistory.push(cityName);
-        localStorage.setItem("city", JSON.stringify(searchHistory));
-        console.log(searchHistory);
       }
+      //saving cityName to local storage
+
+      searchHistory.unshift(cityName);
+      searchHistory.slice(0, 9);
+      localStorage.setItem("city", JSON.stringify(searchHistory));
+
+      console.log(searchHistory);
     });
   });
 });
