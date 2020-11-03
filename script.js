@@ -1,14 +1,45 @@
 var apikey = "5a9330ff39aa4d71dda59e8146ab11fd";
 var long;
 var lat;
-var searchHistory = JSON.parse(localStorage.getItem("city")) || [];
+let searchHistory = JSON.parse(localStorage.getItem("city")) || [];
 console.log(searchHistory);
+
+function clear() {
+  localStorage.clear();
+}
 
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
-  $("").click(function () {});
 
+  //saving cityName to local storage
+  $("#previousCity").html(cityName);
+  searchHistory.unshift(cityName);
+  searchHistory.length = 8;
+  console.log(searchHistory);
+  localStorage.setItem("city", JSON.stringify(searchHistory));
+
+  //rendering search history buttons
+  function historyButtons() {
+    $("#buttonGroup").empty();
+
+    for (var i = 0; i < searchHistory.length; i++) {
+      var newButton = $("<button>");
+      var previousCity = searchHistory[i];
+      if (previousCity != null) {
+        console.log(cityName);
+        newButton.attr("data-name", searchHistory[i]);
+        newButton.text(previousCity);
+        previousCity;
+        $("#buttonGroup").append(newButton);
+      }
+    }
+  }
+
+  $("#saveCity").on("click", function (event) {
+    event.preventDefault();
+    historyButtons();
+  });
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -98,12 +129,4 @@ $("#saveCity").click(function () {
       }
     });
   });
-  //saving cityName to local storage
-  $("#previousCity").html(cityName);
-  searchHistory.unshift(cityName);
-  searchHistory.slice(0, 9);
-  console.log(searchHistory);
-  localStorage.setItem("city", JSON.stringify(searchHistory));
-
-  console.log(searchHistory);
 });
