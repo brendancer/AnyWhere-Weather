@@ -7,6 +7,7 @@ console.log(searchHistory);
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
+  $("").click(function () {});
 
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
@@ -77,10 +78,12 @@ $("#saveCity").click(function () {
 
       for (i = 1; i < 6; i++) {
         //getting and displaying the icon to forcast cards
+
         var iconCode = response.daily[i].weather[0].icon;
         var iconURL =
           "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
-        $("#icon" + [i]).prepend("<img src=' " + iconURL + "'>");
+
+        $("#icon" + [i]).html("<img src=' " + iconURL + "'>");
 
         //adding the rest of the forcast weather data to cards
         var cardCondition = response.daily[i].weather[0].description;
@@ -93,13 +96,14 @@ $("#saveCity").click(function () {
         $("#forcastLow" + [i]).html("Low: " + cardLow + "°F");
         $("#forcastHumid" + [i]).html("Humidity: " + cardHumid + "%");
       }
-      //saving cityName to local storage
-
-      searchHistory.unshift(cityName);
-      searchHistory.slice(0, 9);
-      localStorage.setItem("city", JSON.stringify(searchHistory));
-
-      console.log(searchHistory);
     });
   });
+  //saving cityName to local storage
+  $("#previousCity").html(cityName);
+  searchHistory.unshift(cityName);
+  searchHistory.slice(0, 9);
+  console.log(searchHistory);
+  localStorage.setItem("city", JSON.stringify(searchHistory));
+
+  console.log(searchHistory);
 });
