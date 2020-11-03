@@ -1,13 +1,13 @@
 var apikey = "5a9330ff39aa4d71dda59e8146ab11fd";
 var long;
 var lat;
+var searchHistory = JSON.parse(localStorage.getItem("city")) || [];
+console.log(searchHistory);
 
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
-
-  //saving cityName to local storage
-  localStorage.setItem("city", JSON.stringify(cityName));
+  console.log(cityName);
 
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
@@ -21,12 +21,9 @@ $("#saveCity").click(function () {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
-
     //find longitude and latitude of city
     var long = response.coord.lon;
     var lat = response.coord.lat;
-    console.log(long);
 
     //add city name to city data box
     var nameCity = response.name;
@@ -51,7 +48,6 @@ $("#saveCity").click(function () {
       method: "GET",
     }).then(function (response) {
       //display city data
-      console.log(response);
 
       var temp = Math.round(response.current.temp);
       $("#temp").html("Temperature: " + temp + "°F");
@@ -97,6 +93,14 @@ $("#saveCity").click(function () {
         $("#forcastHigh" + [i]).html("High: " + cardHigh + "°F");
         $("#forcastLow" + [i]).html("Low: " + cardLow + "°F");
         $("#forcastHumid" + [i]).html("Humidity: " + cardHumid + "%");
+
+        //saving cityName to local storage
+        console.log(searchHistory);
+        console.log(cityName);
+
+        searchHistory.push(cityName);
+        localStorage.setItem("city", JSON.stringify(searchHistory));
+        console.log(searchHistory);
       }
     });
   });
