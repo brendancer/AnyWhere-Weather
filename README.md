@@ -1,4 +1,5 @@
 A Weather Dashboard
+See the app live at: 
 
 In this app, the user enters the name of a city in the search field, then clicks the search button. The Dashboard then displays the current weather conditions in that city, including temperature, humidity, and UV index.Below this info is a 5-day forecast (predicted for 12:00 pm each day) for that city showing showing similar information along with an icon to pictorially represent the general conditions.
 
@@ -34,8 +35,20 @@ Technologies Used
 *Javascript
 *JQuery
 *Bootstrap
+*in-line css
 *Moment API
 *OpenWeatherMap API
+
+Future Development:
+
+The searches would be more accurate if they included a city and state, since there are many duplicate city names around the world.
+
+There should be some sort of error message if the selected city is not in the database (or automatically display the nearest city that is in the database)
+
+An hourly forcast for the current day, along with morning and evening forcasts for the next 5 days, would improve the usefulness of this app.
+
+
+
 
 
 
