@@ -12,13 +12,17 @@ function clearCities() {
   location.reload();
 }
 
+$("#cityName").keypress(function () {
+  $("#saveCity").attr("disabled", false);
+});
+
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
-
   event.preventDefault();
   historyButtons();
   $("#cityName").val("");
+  $("#saveCity").attr("disabled", true);
 
   //saving cityName to local storage
   $("#previousCity").html(cityName);
@@ -38,102 +42,109 @@ $("#saveCity").click(function () {
         console.log(cityName);
         newButton.attr("data-name", searchHistory[i]);
         newButton.text(previousCity);
-
+        newButton.addClass("oldCityBtn");
         $("#buttonGroup").append(newButton);
       }
     }
   }
 
   //calling "current weather data" api to get longitude and latitude
-  var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    cityName +
-    "&appid=" +
-    apikey +
-    "&units=imperial";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  }).then(function (response) {
-    //find longitude and latitude of city
-    var long = response.coord.lon;
-    var lat = response.coord.lat;
-
-    //add city name to city data box
-    var nameCity = response.name;
-    $("#nameCity").html(nameCity);
-
-    //add date
-    var date = moment().format("LL");
-    $("#currentDay").html(date);
-
-    //Switch to one call to obtain results including uv index and forcast
-    var query1URL =
-      "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-      lat +
-      "&lon=" +
-      long +
+  function getWeatherData() {
+    var queryURL =
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+      cityName +
       "&appid=" +
       apikey +
       "&units=imperial";
 
     $.ajax({
-      url: query1URL,
+      url: queryURL,
       method: "GET",
     }).then(function (response) {
-      //display city data
+      //find longitude and latitude of city
+      var long = response.coord.lon;
+      var lat = response.coord.lat;
 
-      var temp = Math.round(response.current.temp);
-      $("#temp").html("Temperature: " + temp + "°F");
+      //add city name to city data box
+      var nameCity = response.name;
+      $("#nameCity").html(nameCity);
 
-      var humid = response.current.humidity;
-      $("#humidity").html("Humidity: " + humid + "%");
+      //add date
+      var date = moment().format("LL");
+      $("#currentDay").html(date);
 
-      var wind = response.current.wind_speed;
-      $("#wind-speed").html("Wind Speed: " + wind + "mph");
+      //Switch to one call to obtain results including uv index and forcast
+      var query1URL =
+        "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+        lat +
+        "&lon=" +
+        long +
+        "&appid=" +
+        apikey +
+        "&units=imperial";
 
-      var uvi = response.current.uvi;
-      $("#UV").html("UV index: : " + uvi);
+      $.ajax({
+        url: query1URL,
+        method: "GET",
+      }).then(function (response) {
+        //display city data
 
-      //5 day forcast
+        var temp = Math.round(response.current.temp);
+        $("#temp").html("Temperature: " + temp + "°F");
 
-      //adding date to forcast cards
-      var forcast_1 = moment().add(1, "days").format("L");
-      var forcast_2 = moment().add(2, "days").format("L");
-      var forcast_3 = moment().add(3, "days").format("L");
-      var forcast_4 = moment().add(4, "days").format("L");
-      var forcast_5 = moment().add(5, "days").format("L");
+        var humid = response.current.humidity;
+        $("#humidity").html("Humidity: " + humid + "%");
 
-      $("#forcast-1").html(forcast_1);
-      $("#forcast-2").html(forcast_2);
-      $("#forcast-3").html(forcast_3);
-      $("#forcast-4").html(forcast_4);
-      $("#forcast-5").html(forcast_5);
+        var wind = response.current.wind_speed;
+        $("#wind-speed").html("Wind Speed: " + wind + "mph");
 
-      for (i = 1; i < 6; i++) {
-        //getting and displaying the icon to forcast cards
+        var uvi = response.current.uvi;
+        $("#UV").html("UV index: : " + uvi);
 
-        var iconCode = response.daily[i].weather[0].icon;
-        var iconURL =
-          "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        //5 day forcast
 
-        $("#icon" + [i]).html("<img src=' " + iconURL + "'>");
+        //adding date to forcast cards
+        var forcast_1 = moment().add(1, "days").format("L");
+        var forcast_2 = moment().add(2, "days").format("L");
+        var forcast_3 = moment().add(3, "days").format("L");
+        var forcast_4 = moment().add(4, "days").format("L");
+        var forcast_5 = moment().add(5, "days").format("L");
 
-        //adding the rest of the forcast weather data to cards
-        var cardCondition = response.daily[i].weather[0].description;
-        var cardHigh = Math.round(response.daily[i].temp.max);
-        var cardLow = Math.round(response.daily[i].temp.min);
-        var cardHumid = response.daily[i].humidity;
+        $("#forcast-1").html(forcast_1);
+        $("#forcast-2").html(forcast_2);
+        $("#forcast-3").html(forcast_3);
+        $("#forcast-4").html(forcast_4);
+        $("#forcast-5").html(forcast_5);
 
-        $("#forcastCondition" + [i]).html(cardCondition);
-        $("#forcastHigh" + [i]).html("High: " + cardHigh + "°F");
-        $("#forcastLow" + [i]).html("Low: " + cardLow + "°F");
-        $("#forcastHumid" + [i]).html("Humidity: " + cardHumid + "%");
-      }
+        for (i = 1; i < 6; i++) {
+          //getting and displaying the icon to forcast cards
+
+          var iconCode = response.daily[i].weather[0].icon;
+          var iconURL =
+            "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+          $("#icon" + [i]).html("<img src=' " + iconURL + "'>");
+
+          //adding the rest of the forcast weather data to cards
+          var cardCondition = response.daily[i].weather[0].description;
+          var cardHigh = Math.round(response.daily[i].temp.max);
+          var cardLow = Math.round(response.daily[i].temp.min);
+          var cardHumid = response.daily[i].humidity;
+
+          $("#forcastCondition" + [i]).html(cardCondition);
+          $("#forcastHigh" + [i]).html("High: " + cardHigh + "°F");
+          $("#forcastLow" + [i]).html("Low: " + cardLow + "°F");
+          $("#forcastHumid" + [i]).html("Humidity: " + cardHumid + "%");
+        }
+      });
     });
+  }
+  getWeatherData();
+
+  $(".oldCityBtn").on("click", function () {
+    var oldCity = $(this).text();
+    console.log(oldCity);
+    cityName = oldCity;
+    getWeatherData();
   });
 });
-
-console.log(cityName);
-console.log(newButton);
