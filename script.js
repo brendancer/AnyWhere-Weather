@@ -24,7 +24,7 @@ $("#saveCity").click(function () {
     $("#buttonGroup").empty();
 
     for (var i = 0; i < searchHistory.length; i++) {
-      var newButton = $("<button>");
+      var newButton = $("<button class='btn btn-outline-secondary'>");
       var previousCity = searchHistory[i];
       if (previousCity != null) {
         console.log(cityName);
