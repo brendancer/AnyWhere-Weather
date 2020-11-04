@@ -1,16 +1,22 @@
 var apikey = "5a9330ff39aa4d71dda59e8146ab11fd";
 var long;
 var lat;
+var newButton;
 let searchHistory = JSON.parse(localStorage.getItem("city")) || [];
 console.log(searchHistory);
 
-function clear() {
+function clearCities() {
   localStorage.clear();
+  searchHistory = [];
+  console.log(searchHistory);
+  location.reload();
 }
 
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
+  event.preventDefault();
+  historyButtons();
 
   //saving cityName to local storage
   $("#previousCity").html(cityName);
@@ -30,16 +36,12 @@ $("#saveCity").click(function () {
         console.log(cityName);
         newButton.attr("data-name", searchHistory[i]);
         newButton.text(previousCity);
-        previousCity;
+
         $("#buttonGroup").append(newButton);
       }
     }
   }
 
-  $("#saveCity").on("click", function (event) {
-    event.preventDefault();
-    historyButtons();
-  });
   //calling "current weather data" api to get longitude and latitude
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -130,3 +132,6 @@ $("#saveCity").click(function () {
     });
   });
 });
+
+console.log(cityName);
+console.log(newButton);
