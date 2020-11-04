@@ -2,7 +2,7 @@ A Weather Dashboard
 
 In this app, the user enters the name of a city in the search field, then clicks the search button. The Dashboard then displays the current weather conditions in that city, including temperature, humidity, and UV index.Below this info is a 5-day forecast (predicted for 12:00 pm each day) for that city showing showing similar information along with an icon to pictorially represent the general conditions.
 
-Every time a user searches for a city, a button displaying that search information is created underneath the search field. When the user clicks on that button, a new search is executed for that location. Additionally, if the user closes the window or refreshes the browser, the search history buttons remain, and the app will open up with weather results for the last city the user searched for. Finally, clicking the "Clear History" button clears the user's local storage and removes the history buttons from the page.
+Each city search is saved. Buttons that contain the name of the cities in the search history are created as new cities are searched. Any previous city (up to 8) may be retrieved by pushing the button, and current conditions and a forcast will be displayed. The last 8 cities will be stored in local storage so that after the user saves a new city, they may access their previous searches. Finally, clicking the "Clear History" button clears the user's local storage and removes the history buttons from the page.
 This Progject was created according to the following requirements:
 
 ## User Story
