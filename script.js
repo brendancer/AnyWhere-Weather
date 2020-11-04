@@ -147,4 +147,8 @@ $("#saveCity").click(function () {
     cityName = oldCity;
     getWeatherData();
   });
+  $(document).on("load", function () {
+    cityName = searchHistory[0];
+    getWeatherData();
+  });
 });
