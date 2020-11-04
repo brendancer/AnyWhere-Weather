@@ -18,6 +18,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel ="stylesheet"
+      href ="style.css"
 
   </head>
   <body>
@@ -25,7 +28,7 @@
 
   
     <header class="container-fluid">
-      <h1 class="bg-secondary text-white text-center">Weather Dashboard</h1>
+      <h1 class="text-white text-center" style = "background-color: #59343C;">Weather Dashboard</h1>
     </header>
 
     <!--city search -->
@@ -47,11 +50,11 @@
 
         <br>
       </div>
-      <h4 class="m-3">Search History</h4>
+      <h4 class="m-3" style= "color: #32222F">Search History</h4>
    
        <!--Buttons showing previous city selections-->
       <div class="btn-group-vertical btn-group-large" id = "buttonGroup">
-          <button type="button" class="btn btn-outline-secondary" id= "previousCityButton">
+          <button type="button" class="btn btn-outline-secondary" style = "background-color: #EBD5E1; color: #32222F" id= "previousCityButton">
             Previous City
           </button>
           
@@ -60,16 +63,18 @@
       
     </div>
     <div>
-      <button type="button" class="btn btn-dark" id = "clearBtn" onclick = "clearCities()">Clear History</button>
+      <button type="button" class="btn text-white" id = "clearBtn" style= "background-color:#59343C" onclick = "clearCities()">Clear History</button>
     </div>
     
     
         <!--city data-->
       
       <div class = "col-sm">
-      <div class="border border-primary mt-3 p-3">
+      <div class="border border-primary mt-3 p-3" style="background-color:#92B4F3; color: #32222F ">
           <h2 id="nameCity">City Name</h2>
           <h4 id="currentDay">date</h4>
+          <div id="icon"><src="" alt="Weather icon"></div>
+          <p id="condition">Conditions</p>
 
           <p id="temp">Temperature</p>
 
@@ -97,58 +102,58 @@
     
         <!--5 day forcast-->
     <section class ="container-fluid">
-      <h3 class = "mt-3">5 day forcast</h3>
+      <h3 class = "mt-3"style="color:#59343C">5 day forcast</h3>
       <div class = "card-deck mt-3 ">
-        <div class= "card bg-primary">
-          <div class = "card-body" style = "line-height: 5px">
+        <div class= "card" style = "background-color:#92B4F3; color: #32222F">
+          <div class = "card-body">
             <h6 id = "forcast-1">day 1</h6>
             <div id="icon1"><src="" alt="Weather icon"></div>
             <p id = "forcastCondition1">condition</p>
-            <p id ="forcastHigh1" style = "line-height:0.5;">high
+            <p id ="forcastHigh1" >high</p>
             <p id ="forcastLow1">low</p>
             <p id ="forcastHumid1">humidity</p>
           </div>
         </div>
     
-        <div class= "card bg-primary">
-          <div class = "card-body" style = "line-height: 5px">
+     <div class= "card" style = "background-color:#92B4F3; color: #32222F">
+           <div class = "card-body">
             <h6 id = "forcast-2">day 1</h6>
             <div id="icon2"><src="" alt="Weather icon"></div>
             <p id = "forcastCondition2">condition</p>
-            <p id ="forcastHigh2" style = "line-height:0.5;">high
+            <p id ="forcastHigh2">high</p>
             <p id ="forcastLow2">low</p>
             <p id ="forcastHumid2">humidity</p>
           </div>
         </div>
     
-        <div class= "card bg-primary">
-          <div class = "card-body" style = "line-height: 5px">
+     <div class= "card" style = "background-color:#92B4F3; color: #32222F">
+           <div class = "card-body">
             <h6 id = "forcast-3">day 2</h6>
             <div id="icon3"><src="" alt="Weather icon"></div>
             <p id = "forcastCondition3">condition</p>
-            <p id ="forcastHigh3" style = "line-height:0.5;">high
+            <p id ="forcastHigh3" >high</p>
             <p id ="forcastLow3">low</p>
             <p id ="forcastHumid3">humidity</p>
           </div>
         </div>
      
-        <div class= "card bg-primary">
-          <div class = "card-body" style = "line-height: 5px">
+     <div class= "card" style = "background-color:#92B4F3; color: #32222F">
+           <div class = "card-body">
             <h6 id = "forcast-4">day 1</h6>
             <div id="icon4"><src="" alt="Weather icon"></div>
             <p id = "forcastCondition4">condition</p>
-            <p id ="forcastHigh4" style = "line-height:0.5;">high
+            <p id ="forcastHigh4">high</p>
             <p id ="forcastLow4">low</p>
             <p id ="forcastHumid4">humidity</p>
           </div>
         </div>
      
-        <div class= "card bg-primary">
-          <div class = "card-body" style = "line-height: 5px">
+     <div class= "card" style = "background-color:#92B4F3; color: #32222F">
+           <div class = "card-body">
             <h6 id = "forcast-5">day 1</h6>
             <div id="icon5"><src="" alt="Weather icon"></div>
             <p id = "forcastCondition5">condition</p>
-            <p id ="forcastHigh5" style = "line-height:0.5;">high
+            <p id ="forcastHigh5" >high</p>
             <p id ="forcastLow5">low</p>
             <p id ="forcastHumid5">humidity</p>
           </div>

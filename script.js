@@ -43,6 +43,7 @@ $("#saveCity").click(function () {
         newButton.attr("data-name", searchHistory[i]);
         newButton.text(previousCity);
         newButton.addClass("oldCityBtn");
+        newButton.css("background-color", "#EBD5E1");
         $("#buttonGroup").append(newButton);
       }
     }
@@ -88,6 +89,16 @@ $("#saveCity").click(function () {
         method: "GET",
       }).then(function (response) {
         //display city data
+        console.log(response);
+
+        var cityIconCode = response.current.weather[0].icon;
+        var iconURL =
+          "http://openweathermap.org/img/wn/" + cityIconCode + "@2x.png";
+
+        $("#icon").html("<img src=' " + iconURL + "'>");
+
+        var cond = response.current.weather[0].description;
+        $("#condition").html(cond);
 
         var temp = Math.round(response.current.temp);
         $("#temp").html("Temperature: " + temp + "°F");
@@ -145,10 +156,6 @@ $("#saveCity").click(function () {
     var oldCity = $(this).text();
     console.log(oldCity);
     cityName = oldCity;
-    getWeatherData();
-  });
-  $(document).on("load", function () {
-    cityName = searchHistory[0];
     getWeatherData();
   });
 });
