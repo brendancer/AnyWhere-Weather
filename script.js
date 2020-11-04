@@ -15,8 +15,10 @@ function clearCities() {
 //obtaining the city input
 $("#saveCity").click(function () {
   var cityName = $("#cityName").val();
+
   event.preventDefault();
   historyButtons();
+  $("#cityName").val("");
 
   //saving cityName to local storage
   $("#previousCity").html(cityName);
