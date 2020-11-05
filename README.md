@@ -16,17 +16,14 @@ Each city search is saved. Buttons that contain the name of the cities in the se
 This Progject was created according to the following requirements:
 
 
-## User Story
+## User Story:
 
-```
 AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
-```
 
-## Acceptance Criteria
+## Acceptance Criteria:
 
-```
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
@@ -53,24 +50,22 @@ THEN I am again presented with current and future conditions for that city.
 ## Future Development:
 
 The searches would be more accurate if they included a city and state, since there are many duplicate city names around the world.
-
 There should be some sort of error message if the selected city is not in the database (or automatically display the nearest city that is in the database)
-
 An hourly forcast for the current day, along with morning and evening forcasts for the next 5 days, would improve the usefulness of this app.
 
 ## Links:
-*Moment.js 
--Date Formatting  
---https://momentjs.com/
-*OpenWeatherMap 
--weather information  
---https://openweathermap.org/
-*HTML Color Codes 
--color picker 
---https://html-color-codes.info/colors-from-image/#
-*Flaticons.com
--weathervane favicon
---Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+-Moment.js 
+--Date Formatting  
+---https://momentjs.com/
+-OpenWeatherMap 
+--weather information  
+---https://openweathermap.org/
+-HTML Color Codes 
+--color picker 
+---https://html-color-codes.info/colors-from-image/#
+-Flaticons.com
+--weathervane favicon
+---Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
 
 
