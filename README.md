@@ -1,4 +1,6 @@
 ###A Weather Dashboard
+[favicon.png](https://postimg.cc/MXHJR4zG)
+
 See the app live at: https://brendancer.github.io/weather-dashboard-goodwin/
 
 
