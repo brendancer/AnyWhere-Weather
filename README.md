@@ -54,21 +54,17 @@ THEN I am again presented with current and future conditions for that city.
 - An hourly forcast for the current day, along with morning and evening forcasts for the next 5 days, would improve the usefulness of this app.  
 
 ## Links:
-- Moment.js 
--- Date Formatting  
---- https://momentjs.com/  
+- Moment.js -- Date Formatting  
+  -https://momentjs.com/  
 
-- OpenWeatherMap   
--- weather information  
---- https://openweathermap.org/  
+- OpenWeatherMap -- weather information  
+  - https://openweathermap.org/  
 
-- HTML Color Codes 
--- color picker   
---- https://html-color-codes.info/colors-from-image/#  
+- HTML Color Codes -- color picker   
+  -https://html-color-codes.info/colors-from-image/#  
 
-- Flaticons.com  
--- weathervane favicon  
---- Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  
+- Flaticons.com -- weathervane favicon   
+  -Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  
 
 
 
