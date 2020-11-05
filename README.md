@@ -59,16 +59,16 @@ THEN I am again presented with current and future conditions for that city.
 --- https://momentjs.com/  
 
 - OpenWeatherMap   
--- weather information  
---- https://openweathermap.org/  
+  - weather information  
+  - https://openweathermap.org/  
 
 - HTML Color Codes 
--- color picker   
---- https://html-color-codes.info/colors-from-image/#  
+ - color picker   
+  - https://html-color-codes.info/colors-from-image/#  
 
 - Flaticons.com  
--- weathervane favicon  
---- Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  
+ - weathervane favicon  
+  - Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  
 
 
 
