@@ -1,5 +1,7 @@
-A Weather Dashboard
-See the app live at: 
+###A Weather Dashboard
+See the app live at: https://brendancer.github.io/weather-dashboard-goodwin/
+
+
 
 In this app, the user enters the name of a city in the search field, then clicks the search button. The Dashboard then displays the current weather conditions in that city, including temperature, humidity, and UV index.Below this info is a 5-day forecast (predicted for 12:00 pm each day) for that city showing showing similar information along with an icon to pictorially represent the general conditions.
 
@@ -38,6 +40,7 @@ Technologies Used
 *in-line css
 *Moment API
 *OpenWeatherMap API
+*HTML Color Codes (color picker)
 
 Future Development:
 
@@ -47,6 +50,19 @@ There should be some sort of error message if the selected city is not in the da
 
 An hourly forcast for the current day, along with morning and evening forcasts for the next 5 days, would improve the usefulness of this app.
 
+Links:
+*Moment.js 
+-Date Formatting  
+--https://momentjs.com/
+*OpenWeatherMap 
+-weather information  
+--https://openweathermap.org/
+*HTML Color Codes 
+-color picker 
+--https://html-color-codes.info/colors-from-image/#
+*Flaticons.com
+-weathervane favicon
+--Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
 
 
