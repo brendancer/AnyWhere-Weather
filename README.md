@@ -1,4 +1,6 @@
-###A Weather Dashboard             [![favicon.png](https://i.postimg.cc/zDSDmZMT/favicon.png)](https://postimg.cc/MXHJR4zG)
+# A Weather Dashboard             
+
+[![favicon.png](https://i.postimg.cc/zDSDmZMT/favicon.png)](https://postimg.cc/MXHJR4zG)
 
 
 
@@ -12,6 +14,7 @@ In this app, the user enters the name of a city in the search field, then clicks
 
 Each city search is saved. Buttons that contain the name of the cities in the search history are created as new cities are searched. Any previous city (up to 8) may be retrieved by pushing the button, and current conditions and a forcast will be displayed. The last 8 cities will be stored in local storage so that after the user saves a new city, they may access their previous searches. Finally, clicking the "Clear History" button clears the user's local storage and removes the history buttons from the page.
 This Progject was created according to the following requirements:
+
 
 ## User Story
 
@@ -36,7 +39,7 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city.
 
-Technologies Used
+## Technologies Used
 
 *Html
 *Javascript
@@ -47,7 +50,7 @@ Technologies Used
 *OpenWeatherMap API
 *HTML Color Codes (color picker)
 
-Future Development:
+## Future Development:
 
 The searches would be more accurate if they included a city and state, since there are many duplicate city names around the world.
 
@@ -55,7 +58,7 @@ There should be some sort of error message if the selected city is not in the da
 
 An hourly forcast for the current day, along with morning and evening forcasts for the next 5 days, would improve the usefulness of this app.
 
-Links:
+## Links:
 *Moment.js 
 -Date Formatting  
 --https://momentjs.com/
