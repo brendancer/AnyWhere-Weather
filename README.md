@@ -5,7 +5,8 @@
 See the app live at: https://brendancer.github.io/weather-dashboard-goodwin/
 
 
-[![Screen-Shot-2020-11-04-at-4-58-55-PM.png](https://i.postimg.cc/nz2WkkR9/Screen-Shot-2020-11-04-at-4-58-55-PM.png)](https://postimg.cc/47Kw4zTX)
+[![Screen-Shot-2020-11-04-at-4-58-55-PM.png](https://i.postimg.cc/Nf3dRSsP/Screen-Shot-2020-11-04-at-4-58-55-PM.png)](https://postimg.cc/crc7SD8Q)
+
 
 In this app, the user enters the name of a city in the search field, then clicks the search button. The Dashboard then displays the current weather conditions in that city, including temperature, humidity, and UV index.Below this info is a 5-day forecast (predicted for 12:00 pm each day) for that city showing showing similar information along with an icon to pictorially represent the general conditions.
 
