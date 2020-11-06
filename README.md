@@ -1,4 +1,4 @@
-# A Weather Dashboard             
+# Anywhere Weather             
 
 [![favicon.png](https://i.postimg.cc/zDSDmZMT/favicon.png)](https://postimg.cc/MXHJR4zG)
 
