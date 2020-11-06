@@ -4,7 +4,7 @@
 
 
 
-See the app live at: https://brendancer.github.io/weather-dashboard-goodwin/
+See the app live at: https://brendancer.github.io/Anywhere-Weather/
 
 
 [![Screen-Shot-2020-11-04-at-4-58-55-PM.png](https://i.postimg.cc/Nf3dRSsP/Screen-Shot-2020-11-04-at-4-58-55-PM.png)](https://postimg.cc/crc7SD8Q)
