@@ -16,6 +16,9 @@ Each city search is saved. Buttons that contain the name of the cities in the se
 This Progject was created according to the following requirements:
 
 
+[![Complete-SS.png](https://i.postimg.cc/GpMc3gFx/Complete-SS.png)](https://postimg.cc/WDkRXnfd)
+
+
 ## User Story:
 
 AS A traveler
