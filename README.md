@@ -1,4 +1,7 @@
-# AnyWhere Weather             
+# AnyWhere Weather 
+*Developed by*
+Brenda Goodwin brendanced@gmail.com
+
 
 [![favicon.png](https://i.postimg.cc/zDSDmZMT/favicon.png)](https://postimg.cc/MXHJR4zG)
 
